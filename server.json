@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.dayschedule/mcp",
+  "title": "DaySchedule",
+  "description": "Appointment scheduling: check availability, book, reschedule and cancel meetings, manage events.",
+  "version": "1.0.0",
+  "websiteUrl": "https://dayschedule.com/docs/t/dayschedule-mcp-server-ai-appointment-booking-and-scheduling/570",
+  "repository": {
+    "url": "https://github.com/dayschedule/dayschedule-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://cdn.dayschedule.com/img/dayschedule-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.dayschedule.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional DaySchedule API key as a Bearer token. Clients that support OAuth sign in automatically.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
